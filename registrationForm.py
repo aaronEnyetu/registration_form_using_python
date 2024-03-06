@@ -17,4 +17,25 @@ state.grid(row=3, column=2)
 phone.grid(row=4, column=2)
 email.grid(row=5, column=2)
 
+namevalue = StringVar
+addressvalue = StringVar
+statevalue = StringVar
+phonevalue = StringVar
+emailvalue = StringVar
+
+checkvalue = IntVar
+
+
+nameentry = Entry(root, textvariable=namevalue)
+addressentry = Entry(root, textvariable=addressvalue)
+stateentry = Entry(root, textvariable=statevalue)
+phoneentry = Entry(root, textvariable=phonevalue)
+emailentry = Entry(root, textvariable=emailvalue)
+
+nameentry.grid(row=1, column=3)
+addressentry.grid(row=2, column=3)
+stateentry.grid(row=3, column=3)
+phoneentry.grid(row=4, column=3)
+emailentry.grid(row=5, column=3)
+
 root.mainloop()
