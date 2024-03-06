@@ -40,6 +40,38 @@ nationality_combobox = ttk.Combobox(user_info_frame, values=["Ugandan", "Kenyan"
 nationality_label.grid(row=2, column=1)
 nationality_combobox.grid(row=3, column=1)
 
+for widget in user_info_frame.winfo_children():
+    widget.grid_configure(padx=10, pady=5)
+
+
+#Saving Course Info
+
+courses_frame = tkinter.LabelFrame(frame)
+courses_frame.grid(row=1, column=0, sticky="news", padx=20, pady=20)
+
+
+registered_label = tkinter.Label(courses_frame, text="Registration Status")
+registered_check = tkinter.Checkbutton(courses_frame, text="Currently Registered")
+registered_label.grid(row=0, column=0)
+registered_check.grid(row=1, column=0)
+
+
+numcourses_label = tkinter.Label(courses_frame, text="# Completed Courses")
+numcourses_spinbox = tkinter.Spinbox(courses_frame, from_=0, to='infinity')
+numcourses_label.grid(row=0, column=1)
+numcourses_spinbox.grid(row=1, column=1)
+
+
+numsemesters_label = tkinter.Label(courses_frame, text="# Semesters")
+numsemesters_spinbox = tkinter.Spinbox(courses_frame, from_=0, to="infinity")
+numsemesters_label.grid(row=0, column=2)
+numsemesters_spinbox.grid(row=1, column=2)
+
+
+
+for widget in user_info_frame.winfo_children():
+    widget.grid_configure(padx=10, pady=5)
+
 
 
 
