@@ -32,10 +32,17 @@ stateentry = Entry(root, textvariable=statevalue)
 phoneentry = Entry(root, textvariable=phonevalue)
 emailentry = Entry(root, textvariable=emailvalue)
 
+# Packing entry fields
+
 nameentry.grid(row=1, column=3)
 addressentry.grid(row=2, column=3)
 stateentry.grid(row=3, column=3)
 phoneentry.grid(row=4, column=3)
 emailentry.grid(row=5, column=3)
+
+# Creating Checkbox
+checkbtn = Checkbutton(text="remember me?", variable = checkvalue)
+checkbtn.grid(row=6, column=3)
+
 
 root.mainloop()
