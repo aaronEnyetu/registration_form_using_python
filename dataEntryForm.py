@@ -1,4 +1,5 @@
 import tkinter
+from tkinter import ttk
 
 window = tkinter.Tk()
 window.title("Data Entry Form")
@@ -23,7 +24,16 @@ last_name_entry = tkinter.Entry(user_info_frame)
 first_name_entry.grid(row=1, column=0)
 last_name_entry.grid(row=1, column=1)
 
-title = tkinter.Label(user_info_frame, text="Title")
+title_label = tkinter.Label(user_info_frame, text="Title")
+title_combobox = ttk.Combobox(user_info_frame, values=["", "Mr.", "Ms.", "Dr."])
+title_label.grid(row=0, column=2)
+title_combobox.grid(row=1, column=2)
+
+
+age_label = tkinter.Label(user_info_frame, text="Age")
+age_spinbox = tkinter.Spinbox(user_info_frame, from_=18, to=110)
+age_label.grid(row=2, column=0)
+age_spinbox.grid(row=3, column=0)
 
 
 
