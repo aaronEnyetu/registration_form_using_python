@@ -2,6 +2,9 @@ from tkinter import *
 root = Tk()
 root.geometry("500x300")
 
+def getvals():
+    print("Accepted")
+
 
 Label(root, text="Python Registration Form", font="arial 15 bold").grid(row=0, column=3)
 
@@ -43,6 +46,10 @@ emailentry.grid(row=5, column=3)
 # Creating Checkbox
 checkbtn = Checkbutton(text="remember me?", variable = checkvalue)
 checkbtn.grid(row=6, column=3)
+
+#Submit Button
+
+Button(text="Submit", command=getvals).grid(row=7, column=3)
 
 
 root.mainloop()
